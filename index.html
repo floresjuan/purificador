@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Aplic. Web de jQuery Mobile</title>
+<link href="file:///E|/purificador/jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="file:///E|/purificador/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="file:///E|/purificador/jquery.mobile-1.0.min.js" type="text/javascript"></script>
+<script language="javascript">
+var nombre, mayu, ancho, boo;
+function pool(){
+	nombre=document.getElementById("txtnombre").value;
+	ancho=nombre.length;
+	mayu=nombre.toUpperCase();
+	document.getElementById("txtnombre").value=mayu;
+	nombre=document.getElementById("txtnombre").value;
+	for (x=0; x<=ancho-1; x++)
+	{
+	boo=nombre.charAt(x);
+	if((boo>='A' && boo<='Z') || (boo==" "))
+	{
+	} 
+else
+	 {
+		alert("Caracteres incorrectos solo introduzca letras");
+		break;
+	}
+	}
+}
+var mail, frank, hoy, oja, aloja, tank, pudul;
+function email(){
+mail=document.getElementById("txtimail").value;
+frank=mail.length;
+for(hoy=0; hoy<=frank-1; hoy++)
+ {
+if(((mail.charAt(0)>='0')&&(mail.charAt(0)<='9'))||(mail.charAt(0)=='@'))
+	{
+			alert("Primer caracter inválido");
+		break;}
+	else
+	{
+		oja=mail.indexOf('@');
+		aloja=mail.lastIndexOf('@');
+		if(oja!=aloja){
+			alert("Solo introduce un @");
+			break;
+		}
+		else{
+	if((oja==-1)&&(aloja==-1))
+	{
+	alert("Introduce un @");	
+	break;
+		}
+	else{
+		tank=mail.indexOf('.');
+		
+	       if(tank==-1)
+	 {
+	  alert("Solo introduce un punto");
+			  break;
+		 }
+	  else{
+	  if((tank==-1)&&(pudul==-1)){
+	  alert("Introduce un punto");
+	  break;
+	  }
+	 }
+	 }
+	}
+	}		
+ }
+}	
+var num, li, numer;
+function Telef(){
+	num=document.getElementById("txttel").value;
+	li=num.length;
+	for(x=0; x<=li-1; x++){
+		numer=num.charAt(x);
+	if(((numer>=0) && (numer<=9 ))|| (numer=='-'))
+	{
+		}
+		else{
+			alert("Introduzca solo numeros");
+				break;
+}
+}
+}
+
+	var texto, mayu1, ancho2;
+	function asunto(){
+		texto=document.getElementById("textarea").value;
+		ancho2=texto.length;
+		mayu1=texto.toUpperCase();
+		document.getElementById("textarea").value=mayu1;
+	}
+var meg;
+var seguridad="1567";
+function segu(){
+seguridad=document.getElementById("txtjuan").value;
+meg=document.getElementById("txtjose").value;
+if((seguridad==meg)||(seguridad=="")){
+}
+else{
+	alert("Contraseña incorrecta")
+    document.getElementById("txtjose").value="";
+	}
+}
+
+	
+</script>
+
+</head> 
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+		<h1>FRESH WATER</h1>
+	</div>
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#page2">¿Quienes Somos?</a></li>
+            <li><a href="#page3">Servicios o productos</a></li>
+			<li><a href="#page4">Equipo</a></li>
+            <li><a href="#page5">Contactanos</a></li>
+            <br>
+            <center>
+              <img src="imagenes/descarga (4).jpg" width="25%" height="25%">
+          </center>
+        </ul>		
+	</div>
+	<div data-role="footer">
+		<h4>juan jose flores jimenez</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>¿Quienes Somos?</h1>
+	</div>
+	<div data-role="content">	
+		<h1>Nombre de la empresa</h1>
+        Fresh Water
+        <br> 
+        <br>
+        
+      <img src="imagenes/Fresh-Water-Logo.jpg" width="25%" height="25%">
+<h1>Misión</h1>
+       Todo el mundo tengan un fresh  water  en sus casas y todos los miembros de su familia disfrute de agu purifica 100% limpia.
+       <br>
+       <br>
+      <img src="imagenes/images (8).jpg" width="25%" height="25%">
+<h1>Visión</h1>
+    
+           Todos queremos estar bien de salud todos se fijan en la comida que no tenga muchas calorías etc. Pero nosotros mostramos que no solo la comida hace daño si no también tomar cualquier agua. 
+           <br>
+           <br>
+           <br>
+      <img src="imagenes/images (3).jpg" width="25%" height="25%">
+<h1>Valores</h1>
+        Respeto,Solidaridad y muy buena atencion.
+    <br>
+    <br>
+    <br>
+ 
+  <img src="imagenes/images (12).jpg" width="35%" height="25%"> </div>
+	<div data-role="footer">
+		<h4>juan jose flores jimenez</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header">
+		<h1>Servicios o Productos</h1>
+	</div>
+	<div data-role="content">
+    <h1> PURIFICADORES DE AGUA PARA C0SUMO HUMANO</h1>	
+		Este producto es un excelente purificador de agua de la más alta calidad tiene duración de 10 años.
+        Tenemos diferentes modelos y tamaños 
+        
+
+	</div>
+	<div data-role="footer">
+		<h4>juan jose flores jimenez</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page4">
+	<div data-role="header">
+		<h1>Equipo</h1>
+	</div>
+	<div data-role="content">	
+		Para mayor información comunícate con nuestros operadores:
+        <br>
+        <br>
+      <img src="imagenes/1601486_617801904940393_1799187261_n.jpg" width="25%" height="25%">
+      <br>
+       NOMBRE: Juan José Flores Jiménez <br>
+<br>
+DIRECCION: Allende #38 colonia el capire chietla puebla 
+<br>
+<br>
+TELEFONO: 43 1 70 10
+<br>
+<br>
+CELULAR: 243 113 82 41  
+<br>
+<br>
+E-MAIL:jhon126_joseph@hotmail.com
+<br>
+<br>
+<br>
+<img src="imagenes/1794765_564206357008396_1585489378_n.jpg" width="25%" height="25%">
+<br> 
+NOMBRE: Ricardo Huezca Campos 
+<br>
+<br>
+DIRECCION: Calle del rio #43 col.lázaro cárdenas 
+<br>
+<br>
+TELEFONO: 43 6 68 24
+<br>
+<br>
+CELULAR: 243 112 42 91
+<br>
+<br>
+E-MAIL: riki_america96@hotmail.com
+	</div>
+	<div data-role="footer">
+		<h4>juan jose flores jimenez</h4>
+	</div>
+</div>
+
+<div data-role="page" id="page5">
+	<div data-role="header">
+		<h1>Contactanos</h1>
+	</div>
+	<div data-role="content">
+    <center>	
+		<table width="0" border="0">
+  <tr>
+    <td>Nombre</td>
+    <td><input type="text" name="textnombre" id="txtnombre" onBlur="pool()" value=""/></td>
+  </tr>
+  <tr>
+    <td>E-MAIL</td>
+    <td><input type="text" name="textimail" id="txtimail" onBlur="email()"  value=""/></td>
+  </tr>
+  <tr>
+    <td>Telefono</td>
+    <td><input type="text" name="texttel" id="txttel" onBlur="Telef()" value=""/></td>
+  </tr>
+  <tr>
+    <td>Asunto</td>
+    <td><div data-role="fieldcontain">
+      <label for="textinput"></label>
+      <input type="text" name="textarea" id="textarea" onBlur="asunto()" value=""  />
+    </div></td>
+  </tr>
+  <tr>
+    <td>Seguridad</td>
+     <td><input type="text" name="txtjuan" id="txtjuan" value="1567" disabled="disable"/>
+  
+ <input type="text" name="txtjose" id="txtjose" onBlur="segu()" value=""/>
+ </td>
+  </tr>
+  <tr>
+    <td colspan="2"><button onClick="hola1()" >Enviar</button></td>
+  </tr>
+</table>
+</center>
+		
+	</div>
+	<div data-role="footer">
+		<h4>JUAN JOSÉ FLORES JIMÉNEZ</h4>
+	</div>
+</div>
+
+</body>
+</html>
